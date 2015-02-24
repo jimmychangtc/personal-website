@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+a 
+{
+color:rgb(170,196,170);
+text-decoration:none;
+font-size:90%;
+font-family:Arial, sans-serif;
+margin-left:30px;
+<!--background-color:blue;-->
+}
+
+#menu
+{
+background:#0a0a0a;
+}
+#content
+{
+z-index: 1;
+background:#0a0a0a;
+display: none;
+}
+#upper
+{
+position: absolute;
+top:0px;
+background:#0a0a0a; 
+height:30%;
+min-width: 1366px;
+min-height: 193px;
+}
+#award
+{
+
+}
+#contact
+{
+
+}
+#skill
+{
+
+}
+#interest
+{
+
+}
+#education
+{
+
+}
+#project
+{
+
+
+}
+#work
+{
+
+
+}
+
+body
+{
+margin:0px;
+
+}
+
+h1
+{
+position: relative;
+top: 35%;
+text-align:center;
+color: #dddddd;
+font-size: 250%;
+font-family: "Times New Roman", Times, serif;
+color: rgb(205,205,235);
+}
+
+#bkArrow
+{
+
+}
+
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+	<div id="upper" class="row">
+		<div class="col-xs-0 col-md-3"></div>
+		<div class="col-xs-12 col-md-6" style="height:100%">
+			<img id="bkArrow" src="pictures/back_arrow1.png" alt="go back" style="width:6%;display: none">
+			<h1>Tzu-Chieh Chang</h1>
+		</div>
+		<div class="col-xs-0 col-md-3"></div>
+	</div>
+<!--
+<div id="menu" class="row">
+	
+		<div class="col-xs-0 col-md-3"></div>
+		<div class="col-xs-12 col-md-6">
+			<div class="col-xs-6 col-md-3">
+				<img id="award" src="pictures/menu/Award_small.jpg" alt="Award and Honor" style="width:12%;height:27%;min-width:162px;min-height:121px">
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<img id="contact" src="pictures/menu/Contact Me_small.jpg" alt="Contact Me" style="width:12%;height:27%;min-width:162px;min-height:121px">
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<img id="skill" src="pictures/menu/skills1_small.png" alt="skill" style="width:12%;height:27%;min-width:162px;min-height:121px">
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<img id="interest" src="pictures/menu/Interests_surf_small.jpg" alt="Interests" style="width:12%;height:27%;min-width:162px;min-height:121px">
+			</div>
+			<div class="col-xs-12 col-md-10">
+				<div class="col-xs-6 col-md-5">
+					<img id="education" src="pictures/menu/Education_small.jpg" alt="Education" style="width:17%;height:38%;min-width:229px;min-height:172px" >
+				</div>
+				<div class="col-xs-6 col-md-7">
+					<img id="project" src="pictures/menu/Projects_cocos2D_small.png" alt="Projects" style="width:21.3%;height:38%;min-width:288px;min-height:172px">
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-2">
+				<img id="work" src="pictures/menu/Work Experience_small.jpg" alt="work experience" style="width:10%;height:38%;min-width:135px;min-height:172px;">
+			</div>
+		</div>
+		<div class="col-xs-0 col-md-3"></div>
+	
+</div>
+-->
+<div id="content"></div>
+
+</div><!--end of container-->
+<script>
+/*
+<img id="project" src="pictures/menu/Projects_cocos2D.png" alt="Projects" style="width:288px;height:172px">
+<img id="work" src="pictures/menu/Work Experience.jpg" alt="work experience" style="width:10%;height:172px">
+*/
+var output = "";
+$(document).ready(function(){
+$("#bkArrow").mousedown(function(){this.src = "pictures/back_arrow_hit1.png";});
+$("#bkArrow").mouseup(function(){this.src = "pictures/back_arrow1.png";});
+$("#bkArrow").click(function(){
+	/*
+	output = "";
+	output += '<img id="award" src="pictures/menu/Award_small.jpg" alt="Award and Honor" style="width:12%;height:27%;min-width:162px;min-height:121px">';
+	output += '<img id="contact" src="pictures/menu/Contact Me_small.jpg" alt="Contact Me" style="width:12%;height:27%;min-width:162px;min-height:121px">';
+	output += '<img id="skill" src="pictures/menu/skills1_small.png" alt="skill" style="width:12%;height:27%;min-width:162px;min-height:121px">';
+	output += '<img id="interest" src="pictures/menu/Interests_surf_small.jpg" alt="Interests" style="width:12%;height:27%;min-width:162px;min-height:121px">';
+	output += '<br>';
+	output += '<img id="education" src="pictures/menu/Education_small.jpg" alt="Education" style="width:17%;height:38%;min-width:229px;min-height:172px" >';
+	output += '<img id="project" src="pictures/menu/Projects_cocos2D_small.png" alt="Projects" style="width:21.3%;height:38%;min-width:288px;min-height:172px">';
+	output += '<img id="work" src="pictures/menu/Work Experience_small.jpg" alt="work experience" style="width:10%;height:38%;min-width:135px;min-height:172px;">';
+	*/
+	$("#content").css("display","none");
+	$("#contact").fadeIn(500);
+	$("#skill").fadeIn(500);
+	$("#interest").fadeIn(500);
+	$("#work").fadeIn(500);
+	$("#education").fadeIn(500);
+	$("#award").fadeIn(500);
+	$("#project").fadeIn(500);
+	$("#bkArrow").hide();
+	//$("#content").html(output);
+});
+//Picture Operation
+//Award
+$("#award").mouseenter(function(){
+	this.src = "pictures/menu/Award_bw1_small.jpg";
+	});
+$("#award").mouseleave(function(){
+	this.src = "pictures/menu/Award_small.jpg";
+	});
+$("#award").click(function(){
+	output = "";
+	output += "<h2 style='margin-left:30px'>Honors & Awards</h2>";
+	output += "<hr />";
+	output += "<strong style='margin-left:30px;color:rgb(194,54,54)'>Dean's Master's Fellowship</strong> <div style='margin-left:30px'><strong>September 2012</strong></div>";
+	output += "<div style='margin-left:30px'>University of Southern California - Viterbi School of Engineering</div>";
+	$("#contact").fadeOut(300);
+	$("#skill").fadeOut(500);
+	$("#interest").fadeOut(700);
+	$("#work").fadeOut(900);
+	$("#education").fadeOut(1300,function(){$("#award").fadeOut(800,function(){$("#content").css("display","inline");$("#content").html(output);$("#bkArrow").toggle();});});
+	$("#project").fadeOut(1100);
+	$("#content").css("color","#dddddd");
+	
+});
+
+//Contact Me
+$("#contact").mouseenter(function(){
+	this.src = "pictures/menu/Contact Me_bw1_small.jpg"
+	
+	});
+$("#contact").mouseleave(function(){
+	this.src = "pictures/menu/Contact Me_small.jpg"
+	
+	});
+$("#contact").click(function(){
+	output = "";
+	output += "<h2 style='margin-left:20px'>Contact Me</h2>";
+	output += "<hr />";
+	output +="<br><div style='margin-left:30px'>E-mail: jimmychangtc@gmail.com</div>";
+	$("#skill").fadeOut(300);
+	$("#interest").fadeOut(500);
+	$("#work").fadeOut(700);
+	$("#project").fadeOut(900);
+	$("#award").fadeOut(1300,function(){$("#contact").fadeOut(800,function(){$("#content").css("display","inline");$("#content").html(output);$("#bkArrow").toggle();});});
+	$("#education").fadeOut(1100);
+	$("#content").css("color","#dddddd");
+});
+
+//Skills	
+$("#skill").mouseenter(function(){
+	this.src = "pictures/menu/skills1_bw1_small.png"
+	
+	});
+$("#skill").mouseleave(function(){
+	this.src = "pictures/menu/skills1_small.png"
+	
+	});
+$("#skill").click(function(){
+	output = "";
+	output += "<h2 style='margin-left:20px'>Skills</h2>";
+	output += "<hr />";
+	output +="<strong style='margin-left:20px;color:rgb(194,54,54)'>Software:</strong> Eclipse, Xcode, MS Visual Studio, apache, tomcat, Unix, Linux, Matlab, VMware, TortoiseSVN, Amazon AWS EC2";
+	output +="<br><br><strong style='margin-left:20px;color:rgb(194,54,54)'>Programming:</strong> Java, C++, C, Objective-C, JavaScript, HTML/HTML5, CSS/CSS3, XML, PHP, Python, Ajax, JQuery, AngularJS, Java Servlet, Cocoa, Matlab, SQL, OpenCV";
+	output +="<br><br><strong style='margin-left:20px;color:rgb(194,54,54)'>Language:</strong> Mandarin Chinese, English";
+	$("#interest").fadeOut(300);
+	$("#work").fadeOut(500);
+	$("#project").fadeOut(700);
+	$("#education").fadeOut(900);
+	$("#contact").fadeOut(1300,function(){$("#skill").fadeOut(800,function(){$("#content").css("display","inline");$("#content").html(output);$("#bkArrow").toggle();});});
+	$("#award").fadeOut(1100);
+	$("#content").css("color","#dddddd");
+});
+
+//Interests
+$("#interest").mouseenter(function(){
+	this.src = "pictures/menu/Interests_surf_bw_small.jpg"
+	
+	});
+$("#interest").mouseleave(function(){
+	this.src = "pictures/menu/Interests_surf_small.jpg"
+	
+	});
+$("#interest").click(function(){
+	output = "";
+	output += "<h2 style='margin-left:30px'>Interests</h2>";
+	output += "<hr />";
+	output +="<br><div style='margin-left:30px'>*Basketball</div>";
+	output +="<br><div style='margin-left:30px'>*Dancing</div>";
+	output +="<br><div style='margin-left:30px'>*Hiking</div>";
+	output +="<br><div style='margin-left:30px'>*Snowboarding</div>";
+	output +="<br><div style='margin-left:30px'>*Surfing</div>";
+	output +="<br><div style='margin-left:30px'>*Photographing</div>";
+	$("#work").fadeOut(300);
+	$("#project").fadeOut(500);
+	$("#education").fadeOut(700);
+	$("#award").fadeOut(900);
+	$("#skill").fadeOut(1300,function(){$("#interest").fadeOut(800,function(){$("#content").css("display","inline");$("#content").html(output);$("#bkArrow").toggle();});});
+	$("#contact").fadeOut(1100);
+	$("#content").css("color","#dddddd");
+});
+
+//Education
+$("#education").mouseenter(function(){
+	this.src = "pictures/menu/Education_bw1_small.jpg"
+	
+	});
+$("#education").mouseleave(function(){
+	this.src = "pictures/menu/Education_small.jpg"
+	
+	});
+$("#education").click(function(){
+	changePage();
+	
+	output = "";
+	output += "<h2 style='margin-left:30px'>Education</h2>";
+	output += "<hr />";
+	output += "<strong style='margin-left:30px;color:rgb(194,54,54)'>University of Southern California</strong>";
+	output += "<div style='margin-left:30px'><br>M.S., Computer Science<strong style='position:absolute;left:300px'>GPA: 3.58/4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;May 2014</strong></div><div style='margin-left:300px'> CA, USA</div>";
+	output +="<strong style='margin-left:30px'>Course Work:</strong><div style='margin-left:30px'> Web technology, Analysis of Algorithms, Multimedia Systems Design, Computer Vision, Advanced Mobile Devices and Game Consoles, Specification and Design of UI Software, Robotics, Foundations of Artificial Intelligence</div>";
+	output += "<br><br><br><strong style='margin-left:30px;color:rgb(194,54,54)'>National Tsing Hua University</strong>";
+	output += "<div style='margin-left:30px'><br>B.S., Computer Science <strong style='position:absolute;left:300px'>GPA: 3.56/4.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;June 2011</strong></div><div style='margin-left:300px'> Hsinchu, Taiwan</div>";
+	output +="<strong style='margin-left:30px'>Advanced Course work:</strong><div style='margin-left:30px'> High-Tech Entrepreneurship, Software Engineering, Compiler Design, Operating System, Assembly Language and System Programming, Data Structure, Computer System Administration, Computer Architecture</div>";
+	$("#award").fadeOut(300);
+	$("#contact").fadeOut(500);
+	$("#skill").fadeOut(700);
+	$("#interest").fadeOut(900);
+	$("#project").fadeOut(1300,function(){$("#education").fadeOut(800,function(){$("#content").css("display","inline");$("#content").html(output);$("#bkArrow").toggle();});});
+	$("#work").fadeOut(1100);
+	$("#content").css("color","#dddddd");
+	
+});
+
+//Projects
+$("#project").mouseenter(function(){
+	this.src = "pictures/menu/Projects_cocos2D_bw1_small.png"
+	
+	});
+$("#project").mouseleave(function(){
+	this.src = "pictures/menu/Projects_cocos2D_small.png"
+	
+	});
+$("#project").click(function(){
+	output = "";
+	output += "<h2 style='margin-left:30px'>Projects</h2>";
+	output += "<hr />";
+	output += "<div style='color:gray;margin-left:30px'><br>Android app</div>";
+	output += "<strong style='margin-left:30px;color:rgb(194,54,54)'>Hybrid Movie Search app (Java, PHP)</strong><strong style='position:absolute;left:400px'>September 2012</strong>";
+	output += "<div style='margin-left:30px'>*An app that can provide information of more than 4 millions movies, and share the information on facebook page.</div>";
+	output += "<br><div style='margin-left:30px'>*This app combine Android app design, web server, data scraping, FaceBook API techniques.</div>";
+	output += "<div style='color:gray;margin-left:30px'><br>iOS app</div>";
+	output += "<strong style='margin-left:30px;color:rgb(194,54,54)'>Tower Defense Game (Objective-C)</strong> <strong style='position:absolute;left:400px'>January 2014</strong>";
+	output += "<div style='margin-left:30px'>*A tower defense game with special and unique playing mode, it supports multiplayer game.</div>";
+	output += "<br><div style='margin-left:30px'>*Designed the game mechanism.</div>";
+	output += "<br><div style='margin-left:30px'>*Led the team as a game system designer and core programmer.</div>";
+	output += "<div style='color:gray;margin-left:30px'><br>Computer Vision & Digital Image Processing</div>";
+	output += "<strong style='margin-left:30px;color:rgb(194,54,54)'>Human Face Detection Enhancement (Matlab)</strong><strong style='position:absolute;left:400px'>June 2009</strong>";
+	output += "<div style='margin-left:30px'>*Designed a mathematical model to enhance a picture so that the detect rate of human face can be raised.</div>";
+	output += "<br><div style='margin-left:30px'>*Made the detect rate increased by 17%.</div>";
+	output += "<br><br><strong style='margin-left:30px;color:rgb(194,54,54)'>Video advertisement remove (Java)</strong><strong style='position:absolute;left:400px'>January 2013</strong>";
+	output += "<div style='margin-left:30px'>*Developed a program that can detect and remove the advertisement in a video automatically.</div>";
+	output += "<br><div style='margin-left:30px'>*The program can remove 100% advertisement in our test data.</div>";
+	output += "<br><br><strong style='margin-left:30px;color:rgb(194,54,54)'>Object Recognition (C++)</strong><strong style='position:absolute;left:400px'>September 2013</strong>";
+	output += "<div style='margin-left:30px'>*The program have outstanding detect rate (90%~100%) in certain category of objects.</div>";
+	$("#education").fadeOut(300);
+	$("#award").fadeOut(500);
+	$("#contact").fadeOut(700);
+	$("#skill").fadeOut(900);
+	$("#work").fadeOut(1300,function(){$("#project").fadeOut(800,function(){$("#content").css("display","inline");$("#content").html(output);$("#bkArrow").toggle();});});
+	$("#interest").fadeOut(1100);
+	$("#content").css("color","#dddddd");
+});
+
+//Work Experience
+$("#work").mouseenter(function(){
+	this.src = "pictures/menu/Work Experience_bw1_small.jpg"
+	
+	});
+$("#work").mouseleave(function(){
+	this.src = "pictures/menu/Work Experience_small.jpg"
+	
+	});
+$("#work").click(function(){
+	output = "";
+	output += "<h2 style='margin-left:20px'>Work Experience</h2>";
+	output += "<hr />";
+	output += "<strong style='margin-left:20px;color:rgb(194,54,54)'>Ministry of National Defense of the Republic of China (Taiwan)</strong><strong style='position:absolute;left:500px'>August 2011 - July 2012</strong>";
+	output +="<br><div style='margin-left:20px'>Position: Communication Platoon Commander (Second Lieutenant)</div>";
+	output +="<br><div style='margin-left:20px'>*Led the Communication Platoon (approximately 30 people), which consists of wire, wireless, and information division.</div>";
+	output +="<br><div style='margin-left:20px'>*Maintained and managed the network and computers in the military camp.</div>";
+	output +="<br><div style='margin-left:20px'>*Secured information and intelligence.</div>";
+	$("#project").fadeOut(300);
+	$("#education").fadeOut(500);
+	$("#award").fadeOut(700);
+	$("#contact").fadeOut(900);
+	$("#interest").fadeOut(1300,function(){$("#work").fadeOut(800,function(){$("#content").css("display","inline");$("#content").html(output);$("#bkArrow").toggle();});});
+	$("#skill").fadeOut(1100);
+	$("#content").css("color","#dddddd");
+});
+
+});//document.ready
+//===============================================================
+
+function changePage(){
+	
+	$("#award").fadeOut(300);
+	$("#contact").fadeOut(500);
+	$("#skill").fadeOut(700);
+	$("#interest").fadeOut(900);
+	
+	$("#project").fadeOut(1300,function(){$("#education").fadeOut(800);});
+	$("#work").fadeOut(1100);
+	
+	
+	/* move
+	//upper
+	$("#award").animate({left: '0px'},800,function(){$("#award").hide();});
+	$("#contact").animate({left: '0px'},1000,function(){$("#contact").hide();});
+	$("#skill").animate({left: '100%'},1000,function(){$("#skill").hide();});
+	$("#interest").animate({left: '100%'},1000,function(){$("#interest").hide();});
+	//lower
+	$("#education").animate({left: '-100%'},3000,function(){$("#education").fadeOut();});
+	$("#project").animate({top:'100%'},1000,function(){$("#project").hide();});
+	$("#work").animate({left: '100%'},1000,function(){$("#work").hide();});
+	*/
+}
+
+function showEducation(){
+	output = "";
+	output += "<h3>Education</h3>";
+	output += "<hr />";
+	output += "<strong>University of Southern California</strong> <div style='text-align:right'><strong>GPA: 3.58/4.0   May 2014</strong></div>";
+	output += "M.S., Computer Science<div style='text-align:right'> CA, USA</div>";
+	output +="<strong>Course Work:</strong> Web technology, Analysis of Algorithms, Multimedia Systems Design, Computer Vision, Advanced Mobile Devices and Game Consoles, Specification and Design of UI Software, Robotics, Foundations of Artificial Intelligence";
+	output += "<br><br><br><strong>National Tsing Hua University</strong> <div style='text-align:right'><strong>GPA: 3.56/4.0    June 2011</strong></div>";
+	output += "B.S., Computer Science<div style='text-align:right'> Hsinchu, Taiwan</div>";
+	output +="<strong>Advanced Course work::</strong> High-Tech Entrepreneurship, Software Engineering, Compiler Design, Operating System, Assembly Language and System Programming, Data Structure, Computer System Administration, Computer Architecture";
+	document.getElementById('content').innerHTML = output;
+}
+
+function showSkill(){
+	output = "";
+	output += "<h3>Skills</h3>";
+	output += "<hr />";
+	output +="<strong>Software:</strong> Eclipse, Xcode, MS Visual Studio, apache, tomcat, Unix, Linux, Matlab, VMware, TortoiseSVN, Amazon AWS EC2";
+	output +="<br><br><strong>Programming:</strong> Java, C++, C, Objective-C, JavaScript, HTML/HTML5, CSS/CSS3, XML, PHP, Python, Ajax, JQuery, AngularJS, Java Servlet, Cocoa, Matlab, SQL, OpenCV";
+	output +="<br><br><strong>Language:</strong> Mandarin Chinese, English";
+	document.getElementById('content').innerHTML = output;
+}
+
+function showProject(){
+	output = "";
+	output += "<h3>Projects</h3>";
+	output += "<hr />";
+	output += "<div style='color:gray'><br>Android app</div>";
+	output += "<strong>Hybrid Movie Search app (Java, PHP)</strong> <div style='text-align:right'><strong>September 2012</strong></div>";
+	output += "¡DAn app that can provide information of more than 4 millions movies, and share the information on facebook page.";
+	output += "<br>¡DThis app combine Android app design, web server, data scraping, FaceBook API techniques.";
+	output += "<div style='color:gray'><br>iOS app</div>";
+	output += "<strong>Tower Defense Game (Objective-C)</strong> <div style='text-align:right'><strong>January 2014</strong></div>";
+	output += "¡DA tower defense game with special and unique playing mode, it supports multiplayer game.";
+	output += "<br>¡DDesigned the game mechanism.";
+	output += "<br>¡DLed the team as a game system designer and core programmer.";
+	output += "<div style='color:gray'><br>Computer Vision & Digital Image Processing</div>";
+	output += "<strong>Human Face Detection Enhancement (Matlab)</strong> <div style='text-align:right'><strong>June 2009</strong></div>";
+	output += "¡DDesigned a mathematical model to enhance a picture so that the detect rate of human face can be raised.";
+	output += "<br>¡DMade the detect rate increased by 17%.";
+	output += "<br><br><strong>Video advertisement remove (Java)</strong> <div style='text-align:right'><strong>January 2013</strong></div>";
+	output += "¡DDeveloped a program that can detect and remove the advertisement in a video automatically.";
+	output += "<br>¡DThe program can remove 100% advertisement in our test data.";
+	output += "<br><br><strong>Object Recognition (C++)</strong> <div style='text-align:right'><strong>September 2013</strong></div>";
+	output += "¡DThe program have outstanding detect rate (90%~100%) in certain category of objects.";
+	document.getElementById('content').innerHTML = output;
+}
+
+function showHonornAward(){
+	output = "";
+	output += "<h3>Honors & Awards</h3>";
+	output += "<hr />";
+	output += "<strong>Dean¡¦s Master¡¦s Fellowship</strong> <div style='text-align:right'><strong>September 2012</strong></div>";
+	output += "University of Southern California ¡V Viterbi School of Engineering";
+	document.getElementById('content').innerHTML = output;
+}
+
+function showWorkExperience(){
+	output = "";
+	output += "<h3>Work Experience</h3>";
+	output += "<hr />";
+	output += "<strong>Ministry of National Defense of the Republic of China (Taiwan)</strong> <div style='text-align:right'><strong>August 2011 ¡V July 2012</strong></div>";
+	output +="<br>Position: Communication Platoon Commander (Second Lieutenant)";
+	output +="<br>¡DLed the Communication Platoon (approximately 30 people), which consists of wire, wireless, and information division.";
+	output +="<br>¡DMaintained and managed the network and computers in the military camp.";
+	output +="<br>¡DSecured information and intelligence.";
+	document.getElementById('content').innerHTML = output;
+}
+
+function showInterest(){
+	output = "";
+	output += "<h3>Interests</h3>";
+	output += "<hr />";
+	output +="<br>¡DBasketball";
+	output +="<br>¡DDancing";
+	output +="<br>¡DHiking";
+	output +="<br>¡DSnowboarding";
+	output +="<br>¡DSurfing";
+	output +="<br>¡DPhotographing";
+	
+	
+	document.getElementById('content').innerHTML = output;
+}
+
+function showContact(){
+
+	output = "";
+	output += "<h3>Contact Me</h3>";
+	output += "<hr />";
+	output +="<br>E-mail: jimmychangtc@gmail.com";
+	document.getElementById('content').innerHTML = output;
+
+}
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html>

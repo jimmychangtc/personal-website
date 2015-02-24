@@ -1,0 +1,237 @@
+<!DOCTYPE HTML>
+<!--
+	MegaCorp by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Tzu-Chieh Chang - Education & Skills</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+	
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+       data = google.visualization.arrayToDataTable([
+        ["Programming Language", "Level", { role: "style" } ],
+        ["Java", 0, "#2f849a"],
+        ["C++", 0, "#e46b09"],
+        ["Objective-C", 0, "#fb3c1a"],
+        ["Html/CSS", 0, "#c8fb1a"],
+		["JavaScript/JQuery", 0, "#bb8131"],
+		["PHP/Python", 0, "#94b2d6"],
+		["Matlab", 0, "#dce6f2"]
+      ]);
+	  
+	   data1 = google.visualization.arrayToDataTable([
+        ["Software", "Level"],
+        ["Eclipse", 8 ],
+        ["Visual Studio", 5],
+        ["XCode", 5],
+        ["Apache", 6],
+		["AWS", 5],
+		["Linux", 6]
+      ]);
+
+       view = new google.visualization.DataView(data);
+	   view1 = new google.visualization.DataView(data1);
+     /* view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+*/
+       options = {
+        title: "Programming Skills",
+        width: 1200,
+        height: 400,
+        bar: {groupWidth: "61.8%"},
+        legend: { position: "none" },
+		animation:{
+        duration: 1000,
+        easing: 'out',
+		},
+		dataOpacity:0.9,
+		fontSize:20,
+		hAxis:{
+		textStyle:{color: '#c0c0c0', fontSize:20}
+		
+		},
+		vAxis:{
+		gridlines:{count:2,color:'gray'},
+		 ticks: [{v:2, f:'Beginner'}, {v:4, f:'Intermediate'}, {v:6, f:'Advanced'}, {v:8, f:'Master'}, {v:10, f:'Ninja'}],
+		 minValue:0
+		},
+		titleTextStyle:{
+		color: '#cfcfcf',
+		fontSize: 25
+		},
+		backgroundColor: '#0c0e0f'
+      };
+ 
+	 options1 = {
+        title: "Software Skills",
+        width: 1200,
+        height: 600,
+		chartArea:{
+		top:200
+		},
+		pieSliceText: 'label',
+		slices: [{color: "#2f849a"}, {color: "#e46b09"}, {color: "#fb3c1a"}, {color: "#c8fb1a"}, {color: "#bb8131"}, {color: "#94b2d6"}],
+        pieSliceTextStyle:{
+		color: '#103988'
+		},
+		legend: { position: "none" },
+		is3D: true,
+		dataOpacity:0.3,
+		fontSize:20,
+		titleTextStyle:{
+		color: '#cfcfcf',
+		fontSize: 25
+		},
+		backgroundColor: '#0c0e0f'
+      };
+      chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+	  chart1 = new google.visualization.PieChart(document.getElementById("piechart_values"));
+      chart.draw(view, options);
+	  chart1.draw(view1, options1);
+  }
+  
+  function setChartValue(){
+
+	data.setValue(0, 1, 8);
+	data.setValue(1, 1, 7);
+	data.setValue(2, 1, 7);
+	data.setValue(3, 1, 6.5);
+	data.setValue(4, 1, 6.5);
+	data.setValue(5, 1, 5);
+	data.setValue(6, 1, 5);
+
+	chart.draw(view, options);
+  }
+  
+  </script>
+	</head>
+	<body>
+
+		<!-- Header -->
+		<div id="header-wrapper">
+		
+        	<div id="header" class="container">
+            
+            	<div id="logo"><h1><a href="#">Tzu-Chieh Chang</a></h1></div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+						<li class="current_page_item"><a href="education.html">Education & Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        
+                    </ul>
+                </nav>
+                
+            </div>
+
+		</div>
+		<!-- Header Ends Here -->
+
+		<!-- Page -->
+        
+        	<div id="page">
+            	<div class="container">
+                	<div class="row">
+                    
+                    	<div id="content" class="12u skel-cell-important">
+                        	
+							<article>
+                            	<header>
+									<br>
+                                    <h2 class="main-title">Education</h2>
+									<br>
+                                </header>
+								
+                                <img src="images/USClogo.jpg" alt="USC logo" class="image-schoollogo">
+								
+								<h2 style="font-size:190%;line-height:1.5em">
+                                University of Southern California
+								</h2>
+								<h2 style="font-size:150%;line-height:1.5em;text-align:justify">
+                                2012-2014<br>
+								M.S., Computer Science<br>
+								GPA: 3.58/4.0<br>
+								Course Work :<br>
+								Web technology,<span style="padding-left:20px">Analysis of Algorithms</span>,<span style="padding-left:20px">Multimedia Systems Design</span>,<span style="padding-left:20px">Computer Vision, Advanced Mobile Devices and Game Consoles</span>,<span style="padding-left:20px">Specification and Design of UI Software</span>,<span style="padding-left:20px">Robotics</span>,<span style="padding-left:20px">Foundations of Artificial Intelligence</span>
+								</h2>
+								
+								<br><br><br><br>
+								<div >
+								<img src="images/NTHUlogo.jpg" alt="NTHU logo" class="image-schoollogo">
+								
+								<h2 style="font-size:190%;line-height:1.5em">
+                                National Tsing Hua University
+								</h2>
+								<h2 style="font-size:150%;line-height:1.5em;text-align:justify">
+                                2007-2011<br>
+								B.S., Computer Science<br>
+								GPA: 3.56/4.0<br>
+								Advanced Course work :<br>
+								High-Tech Entrepreneurship,<span style="padding-left:20px">Software Engineering</span>, <span style="padding-left:20px">Compiler Design</span>,<span style="padding-left:20px">Operating System</span>,<span style="padding-left:20px">Algorithm</span>,<span style="padding-left:20px">Data Structure</span>,<span style="padding-left:20px">Computer System Administration</span>,<span style="padding-left:20px">Computer Architecture</span>
+								</h2>
+								</div>
+							</article>
+							<br><br><br><br><br><br><br>
+							<article onmouseover="setChartValue();">
+                            	<header>
+									<br>
+                                    <h2 class="main-title">Skills</h2>
+									<br>
+                                </header>
+								<div onmouseover="setChartValuePie()" id="columnchart_values" style="width: 1200px; height: 400px;"></div>
+								<div id="piechart_values" style="width: 1200px; height: 600px;"></div>
+								<a href="#header"><p style="font-size:150%">back</p></a>
+							</article>
+							
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+		<!-- /Page -->
+
+		<!-- Contact -->
+		<div class="contact">
+							<h2>Contact Me</h2>
+							<p>Looking for a professional and passionate software engineer? Feel free to contact me by</p>
+						
+							<ul class="icons">
+								<li><a href="mailto:jimmychangtc@gmail.com" class="fa fa-envelope"></a></li>
+								<li><a href="https://www.facebook.com/jimmy.chang.752487?fref=ts" class="fa fa-facebook" target="_blank"></a></li>
+								<li><a href="http://www.linkedin.com/pub/tzu-chieh-chang/55/17b/465" class="fa fa-linkedin" target="_blank"></a></li>
+							</ul>
+		</div>
+		
+		<!-- Copyright -->
+            <div id="copyright" class="container">
+                Theme Design: <a href="http://templated.co">TEMPLATED</a></br>
+				Modified by Tzu-Chieh Chang
+            </div>
+
+
+	</body>
+</html>
